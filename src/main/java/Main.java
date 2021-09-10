@@ -115,6 +115,6 @@ public class Main {
     
     //This is a comment made on the remote server and isn't yet on my machine 
     
-    // This is the second comment
+    // This is the second comment.
 
 }
