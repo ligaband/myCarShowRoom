@@ -47,4 +47,59 @@ public class ShowRoom {
         return "Car removed successfully";
     }
 
+    public Car findByName(String name){
+        for (Car car: cars){
+            if (car.name.equals(name)){
+                return car;
+            }
+        }
+        return null;
+
+    }
+
+    public Car findByType(String type){
+        for (Car car: cars){
+            if (car.type.equals(type)){
+                return car;
+            }
+        }
+        return null;
+
+    }
+
+    public Car findByManufacturer(String manufacturer){
+        for (Car car : cars){
+            if (car.manufacturer.equals(manufacturer)){
+                return car;
+            }
+        }
+        return null;
+    }
+
+    public Car updateCarByName(int carId, Car car) {
+        return cars.set(carId, car);
+    }
+
+    public Car updateCarByManufacturer(int carId, Car car){
+        return cars.set(carId, car);
+    }
+
+    public Car updateCarByType(int carId, Car car){
+        return cars.set(carId, car);
+    }
+
+    public Car searchByProperty(String value) {
+        for (Car car : cars) {
+            if (car.type.equals(value)) {
+                return car;
+            } else if (car.name.equals(value)) {
+                return car;
+            } else if (car.manufacturer.equals(value)) {
+                return car;
+            }
+
+        }
+        return null;
+    }
+
 }
